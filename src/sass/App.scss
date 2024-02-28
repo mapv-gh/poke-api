@@ -1,0 +1,65 @@
+@use 'variables';
+.app-evolutions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+.navbar-container{
+    display: flex;
+    background-color: variables.$background-primary;
+}
+
+.logo{
+    display: flex;
+    height: 65px;
+    background-color: white;
+    width: 260px;
+}
+.buttons-container{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transform: translate(-20px);
+}
+.card-container{
+    display: flex;
+    width: 500px;
+    height: 300px;
+    margin-top: 80px;
+    position: relative;
+}
+.card-container .card:nth-child(1){
+    position: absolute;
+    left: -100px;
+    z-index: 3;
+    transition: 100ms;
+    &:hover{
+        transform: translateY(-10px);
+    }
+}
+.card-container .card:nth-child(2){
+    position: absolute;
+    left: 130px;
+    z-index: 2;
+    transition: 100ms;
+    &:hover{
+        transform: translateY(-10px);
+    }
+}
+.card-container .card:nth-child(3){
+    position: absolute;
+    left: 360px;
+    transition: 100ms;
+    &:hover{
+        transform: translateY(-10px) ;
+    }
+}
+
+.card1{
+    transform: translate(230px);
+}
+.card2{
+    transform: translate(116px);
+}

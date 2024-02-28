@@ -1,0 +1,29 @@
+@use 'variables';
+
+.button{
+    background-color: variables.$background-primary;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+
+    &_shadow{
+        width: 60px;
+        height: 60px;
+        background-color: variables.$color4;
+        border-radius: 50%;
+        position: absolute;
+        top:3px;
+        z-index: -1;
+    }
+
+    &_box{
+        position: relative;
+    }
+    &:active{
+        transform: translateY(3px);
+    }
+}

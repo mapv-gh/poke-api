@@ -1,0 +1,129 @@
+@use 'variables';
+
+.card_pokemon{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 490px;
+    border-radius: 16px;
+    position: relative;
+    &:hover{
+        transition-duration: 200ms;
+        transform: scale(1.08);
+        >img{
+            transform: scale(1.15);
+            transition-duration: 100ms;
+            margin-top: -20px;
+            filter: drop-shadow(1px 3px 0px black);
+        }
+        transition: all 0.3 ease-in-out;
+        .color_id{
+            color:black;
+        }
+    }
+    
+    &_img{
+        width: 160px;
+        margin: 0 auto;
+        z-index: 2;
+        transition: all 0.3 ease-in-out;
+    }
+    &_subcard{
+        position: absolute;
+        border-radius: 10px;
+        background-color: rgb(52, 233, 52);
+        min-height: 370px;
+        padding: 15px;
+        width: 100%;
+        margin-top: 100px;
+        padding-top: 15px;
+        border: 1px solid black;
+        box-shadow: 1px 1px 0px hsl(33, 42%, 40%), 2px 2px 0px hsl(33, 42%, 39%),
+        3px 3px 0px hsl(33, 42%, 38%), 4px 4px 0px hsl(33, 42%, 37%), 5px 5px 0px hsl(33, 42%, 36%);
+    }
+    &_id{
+        background-color: white;
+        border: solid 1px black;
+        width: auto;
+        padding: 1px 4px;
+        font-size: 0.85rem;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    &_name{
+        margin-top: 9px;
+        padding: 1px ;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        text-transform: capitalize;
+        display: block;
+        font-weight: 500;
+        font-family: fantasy;
+
+    }
+    &_altura{
+        margin-top: 2px;
+        font-size: 0.75rem;
+        text-transform: capitalize;
+        display: block
+        color black;
+        font-weight: 500;
+    }
+    &_peso{
+        margin-top: 2px;
+        font-size: 0.75rem;
+        text-transform: capitalize;
+        display: block
+        color black;
+        font-weight: 500;
+    }
+    &_habitat{
+        margin-top: 2px;
+        font-size: 0.75rem;
+        text-transform: capitalize;
+        display: block
+        color black;
+        font-weight: 500;
+    }
+    .div_stats{
+        margin: 4px;
+        width: 100%;
+        padding: 5px;
+        .item_stats{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+        .name{
+            width: 90px;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+        .numero{
+            width: 22px;
+            text-transform: capitalize;
+            text-align: end;
+            font-weight: 500;
+            
+        }
+    }
+    .div_type_color{
+        display: flex;
+        justify-content: space-between;
+        margin: 6px 0px;
+        .color_type{
+            border: 1px solid black;
+            border-radius: 4px;
+            color: white;
+            font-weight: 500;
+            width: 50px;
+            text-align: center;
+            height: 20px;
+            line-height: 17px;
+        }
+    }
+}
+
